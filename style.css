@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a,
+button,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline: none;
+}
+
+.text-clash {
+    font-family: clash;
+}
+
+h4 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 34px;
+    color: black;
+}
+
+body {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgba(41, 39, 39, 0.8);
+    font-family: Archivo;
+    background-image: linear-gradient(90deg, #fdf8ea, #fff 50%, #fdf8ea);
+    ;
+}
+
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 87px;
+        font-weight: 600;
+        line-height: 97px;
+        letter-spacing: 2px;
+        color: black;
+        font-family: clash;
+    }
+
+    h2 {
+        font-size: 56px;
+        font-weight: 600;
+        line-height: 66px;
+        color: black;
+        font-family: clash;
+    }
+
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        color: black;
+        font-family: clash;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    h2 {
+        font-size: 35px;
+        font-weight: 600;
+        line-height: 43px;
+        color: black;
+        font-family: clash;
+    }
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        color: black;
+        font-family: clash;
+    }
+}
+
+@media (min-width: 478px) and (max-width: 768px) {
+    h1 {
+        font-size: 52px;
+        font-weight: 600;
+        line-height: 62px;
+        color: black;
+        font-family: clash;
+    }
+    
+    h2 {
+        font-size: 29px;
+        font-weight: 600;
+        line-height: 43px;
+        color: black;
+        font-family: clash;
+    }
+
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 34px;
+        color: black;
+        font-family: clash;
+    }
+
+    body {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 28px;
+        color: rgba(41, 39, 39, 0.8);
+        font-family: Archivo;
+    }
+}
+
+@media screen and (min-width: 478px) {
+    .container {
+        max-width: 1350px;
+        margin: 0 auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .container {
+        max-width: 1350px;
+        margin: 0 auto;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    h1 {
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 46px;
+        color: black;
+        font-family: clash;
+    }
+
+    h2 {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 32px;
+        color: black;
+        font-family: clash;
+    }
+
+    h3{
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 30px;
+        color: black;
+        font-family: clash;
+    }
+
+    body {
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 28px;
+        color: rgba(41, 39, 39, 0.8);
+        font-family: Archivo;
+    }
+}
+
+.an-rotate {
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-duration: 8s;
+    animation-timing-function: cubic-bezier(1, 1, 0, 0);
+    animation-fill-mode: both;
+}
+
+.an-stars {
+    animation-name: stars;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+}
+
+.numbers {
+    animation-name: numberss;
+    animation-iteration-count: 1;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.36, 0.87, 0.47, 0.92);
+    animation-direction: alternate;
+    animation-delay: 1.5s;
+}
+
+.trans {
+    transition: all 400ms ease;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes stars {
+    to {
+        transform: scale(0);
+        rotate: 90deg;
+    }
+}
+
+@keyframes numberss {
+    from {
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-900px);
+    }
+}
+
+
+.hoverme:hover a {
+    background-color: #e74630;
+}
+
+@keyframes width {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: 50%;
+    }
+}
+
+@keyframes width2 {
+    from {
+        left: 100%;
+    }
+
+    to {
+        left: 50%;
+    }
+}
+
+.anim1:hover a{
+    animation-name: width;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-fill-mode: backwards;
+}
+
+.anim2:hover a{
+    animation-name: width2;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-direction: alternate;
+}
+
+
+@keyframes showw {
+    from {
+        height: 0;
+        opacity: 0;
+    }
+
+    to {
+        height: 85px;
+        opacity: 1;
+    }
+}
+
+.tooshow {
+    animation-name: showw;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+}
+
+
+.infinity{
+    animation-name: infinitani;
+    animation-timing-function: linear;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.hovershow:hover a {
+    display: block;
+    animation-name: totop;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-duration: .3s;
+}
+
+.hovershow:hover div {
+    display: block;
+    animation-name: oposity;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-duration: .8s;
+}
+
+@keyframes oposity {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes totop {
+    from {
+        top: 100%;
+    }
+
+    to {
+        top: 0;
+    }
+}
+
+@keyframes infinitani {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+.rota1 {
+    transform: rotate(-225deg);
+    position: relative;
+    top: 5px;
+
+}
+
+.rota2 {
+    transform: rotate(225deg);
+    position: relative;
+    top: -5px;
+}
+
+@keyframes navani {
+    from {
+        height: 0vh;
+        padding: 0;
+    }
+
+    to {
+        height: 400px;
+    }
+}
+
+.tomobnav{
+    animation-name: oposity;
+    animation-duration: .8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+#mobnav {
+    animation-name: navani;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+
+.bg-linear {
+    background-image: linear-gradient(90deg, #fdf8ea, #fff 50%, #fdf8ea);
+}
+.con {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 520px;
+}
+
+
+@keyframes cart {
+    from{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+.cartanim{
+    animation-name: cart;
+    animation-timing-function: ease-in-out;
+    animation-duration: .5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+.hide{
+    animation: hide .1s linear 2s forwards;
+ }
+
+ @keyframes hide{
+     from{
+       width: 100%;
+     }
+     to{
+         width: 0;
+     }
+ }
+
+ .rot {
+
+    animation: rot .5s ease-in-out .4s;
+
+}
+
+@keyframes rot {
+
+    0%,
+    100% {
+      rotate: 0;
+        transform: scale(1);
+    }
+
+    50% {
+        rotate: 45deg;
+        transform: scale(0.8, .8);
+    }
+}
+
+.post {
+    animation: post ease-in-out .6s  forwards 1.4s;
+}
+
+@keyframes post {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(-50vh);
+    }
+}
+
+.posb {
+    animation: posb ease-in-out .6s  forwards 1.4s;
+}
+
+@keyframes posb {
+    0% {
+        transform: translateY(0);
+
+    }
+
+    100% {
+        transform: translateY(50vh);
+    }
+}
+
+.postion{
+    animation: postion .9s ease-in-out   forwards;
+  
+}
+.ops{
+    animation: opsate .5s ease-in-out 1s forwards;
+}
+@keyframes postion{
+    0%{
+        transform: translateY(30px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes opsate{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
